@@ -1,0 +1,114 @@
+@import url(http://fonts.googleapis.com/css?family=Merriweather+Sans);
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #dff;
+  font-family: "Merriweather Sans", Arial;
+  text-align: center;
+  padding-top: 75px;
+}
+
+/* Common styles for buttons */
+.button {
+  /* Create white to black gradient using 'background-image' with 60% opacity. This will be later merged with animated colors to give the effect of an animated gradient */
+  background-image: linear-gradient(
+     rgba(255, 255, 255, 0.6),
+     rgba(0,0,0,0.6)
+    );
+  display: inline-block;
+  height: 70px;
+  width: 120px;
+  line-height: 70px; /* Same as height */
+  margin: 5px;
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+  border-radius: 5px;
+  box-shadow: 0 0 5px 0 rgba(0,0,0,0.2);
+}
+
+#rgb {
+  background-color: #ff0; /* yellow */
+  animation: rgb 3s infinite alternate;
+}
+
+@keyframes rgb {
+  50% {
+    background-color: #06F; /* blue */
+  }
+  100% {
+    background-color: #F00; /* red */
+  }
+}
+
+#namedcolors {
+  background-color: red;
+  animation: namedcolors 0.3s infinite alternate;
+}
+
+@keyframes namedcolors {
+  100% {
+    background-color: orange;
+  }
+}
+
+#hue {
+  background-color: hsl(0, 100%, 50%); /* red */
+  animation: hue 3s infinite alternate;
+}
+
+@keyframes hue {
+  /* hue will animate from 0 to 360. Saturation and Lightness remain constant */
+  20% {
+    background-color: hsl(72, 100%, 50%);
+  }
+
+  40% {
+    background-color: hsl(144, 100%, 50%);
+  }
+
+  60% {
+    background-color: hsl(216, 100%, 50%);
+  }
+
+  80% {
+    background-color: hsl(288, 100%, 50%);
+  }
+
+  100% {
+    background-color: hsl(360, 100%, 50%);
+  }
+}
+
+#saturation {
+  /* 0% saturated red = grey */
+  background-color: hsl(0, 0%, 50%);
+  animation: saturation 3s infinite alternate;
+}
+
+@keyframes saturation {
+  /* 100% saturated red */
+  100% {
+    background-color: hsl(0, 100%, 50%);
+  }
+}
+
+#lightness {
+  /* 0% saturated red = grey */
+  background-color: hsl(0, 100%, 0%);
+  animation: lightness 3s infinite alternate;
+}
+
+@keyframes lightness {
+  50% {
+    background-color: hsl(0, 100%, 50%);
+  }
+  /* 100% saturated red */
+  100% {
+    background-color: hsl(0, 100%, 50%);
+  }
+}
