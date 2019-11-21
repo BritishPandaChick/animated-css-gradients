@@ -40,6 +40,7 @@ body {
   50% {
     background-color: #06F; /* blue */
   }
+
   100% {
     background-color: #F00; /* red */
   }
@@ -98,17 +99,48 @@ body {
 }
 
 #lightness {
-  /* 0% saturated red = grey */
+  /* 0% lightness = black */
   background-color: hsl(0, 100%, 0%);
   animation: lightness 3s infinite alternate;
 }
 
 @keyframes lightness {
+  /* 50% lightness = red */
   50% {
     background-color: hsl(0, 100%, 50%);
   }
+
   /* 100% saturated red */
   100% {
-    background-color: hsl(0, 100%, 50%);
+    background-color: hsl(0, 100%, 100%);
+  }
+}
+
+/* animating gradients to flat colors - a bit complex */
+#topflat {
+  color: #999;
+  /* a transparent-black gradient above white base, making it a black-white gradient */
+  background-color: white;
+  background-image: linear-gradient(rgba(0,0,0,0), black);
+  animation: topflat 3s infinite alternate;
+}
+
+@keyframes topflat {
+  100% {
+    background-color: black;
+  }
+}
+
+#bottomflat {
+  color: #999;
+  /* a white-transparent gradient above white base, making it a black-white gradient */
+  background-color: black;
+  background-image: linear-gradient(white, rgba(255,255,255,0));
+  animation: bottomflat 3s infinite alternate;
+}
+
+@keyframes bottomflat {
+  100% {
+    background-color: white;
   }
 }
