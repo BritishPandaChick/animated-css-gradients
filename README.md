@@ -1,5 +1,5 @@
 # animated-css-gradients
-CodePlayer Animated CSS3 Gradients project. Made with HTML and CSS.
+CodePlayer Animated CSS3 Gradients project.
 
 ## Instructions
 Clone repo or download zip file. Open index.html in your browser.
