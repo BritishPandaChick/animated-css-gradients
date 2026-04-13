@@ -1,11 +1,9 @@
-# animated-css-gradients
-CodePlayer Animated CSS3 Gradients project.
+# Animated CSS Gradients
+Blocks that are animated to change gradient colors.
 
 ## Instructions
-Clone repo or download zip file. Open index.html in your browser.
-
-## Contributions
-This code is based on starter code from TheCodePlayer.com. Therefore I will not be accepting any pull requests.
+1. Clone repo or download zip file. 
+2. Open index.html in your browser. You will see the gradients change colors in each block.
 
 ## Acknowledgements
 * TheCodePlayer.com
